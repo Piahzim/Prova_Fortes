@@ -233,6 +233,7 @@ begin
       ParamByName('COD_COMBUSTIVEL').AsInteger := DBLookupComboBox4.KeyValue;
     end;
 
+    Sql.Add('ORDER BY ab.data_compra,ab.hora_compra,ti.TIPO_TANQUE,bo.COD_BOMBA DESC  ');
     ParamByName('dt_inicial').AsDate := DateTimePickerInicial.Date;
     ParamByName('dt_final').AsDate := DateTimePickerFinal.Date;
 
